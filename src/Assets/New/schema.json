@@ -1,0 +1,276 @@
+[
+  {
+    "id": "general",
+    "type": "section",
+    "name": "general",
+    "label": "General",
+    "default": [],
+    "fields": [
+      {
+        "id": "general_variant",
+        "type": "select",
+        "default": "variant1",
+        "name": "variant",
+        "label": "Variant",
+        "options": {
+          "variant1": "Variant 1",
+          "variant2": "Variant 2",
+          "variant3": "Variant 3",
+          "variant4": "Variant 4"
+        }
+      },
+      {
+        "id": "general_content",
+        "type": "array",
+        "default": [],
+        "name": "content",
+        "label": "Content",
+        "fields": [
+          {
+            "id": "general_content_icon",
+            "type": "icons",
+            "default": {
+              "value": "far fa-address-book",
+              "library": "fa-solid"
+            },
+            "name": "icon",
+            "label": "Icon"
+          },
+          {
+            "id": "general_content_image",
+            "type": "media",
+            "default": {
+              "url": "/wp-content/plugins/wiloke-card/src/Assets/Image/placeholder.jpeg"
+            },
+            "name": "image",
+            "label": "Image"
+          },
+          {
+            "id": "general_content_title",
+            "type": "text",
+            "default": "This is a title",
+            "name": "title",
+            "label": "Title"
+          },
+          {
+            "id": "general_content_text",
+            "type": "wysiwyg",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue eu rhoncus vehicula",
+            "name": "text",
+            "label": "Text"
+          },
+          {
+            "id": "general_content_buttonText",
+            "type": "text",
+            "default": "Learn more",
+            "name": "buttonText",
+            "label": "Button Text"
+          },
+          {
+            "id": "general_content_buttonUrl",
+            "type": "text",
+            "default": "",
+            "name": "buttonUrl",
+            "label": "Button Url"
+          },
+          {
+            "id": "general_content_backgroundColor",
+            "type": "color",
+            "default": "",
+            "name": "backgroundColor",
+            "label": "Background Color"
+          },
+          {
+            "id": "general_content_iconColor",
+            "type": "color",
+            "default": "",
+            "name": "iconColor",
+            "label": "Icon Color"
+          },
+          {
+            "id": "general_content_titleColor",
+            "type": "color",
+            "default": "",
+            "name": "titleColor",
+            "label": "Title Color"
+          },
+          {
+            "id": "general_content_textColor",
+            "type": "color",
+            "default": "",
+            "name": "textColor",
+            "label": "Text Color"
+          },
+          {
+            "id": "general_content_buttonColor",
+            "type": "color",
+            "default": "",
+            "name": "buttonColor",
+            "label": "Button Color"
+          },
+          {
+            "id": "general_content_buttonBackgroundColor",
+            "type": "color",
+            "default": "",
+            "name": "buttonBackgroundColor",
+            "label": "Button Background Color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "responsive",
+    "type": "section",
+    "name": "responsive",
+    "label": "Responsive",
+    "default": [],
+    "fields": [
+      {
+        "id": "responsive_lg",
+        "type": "number",
+        "name": "lg",
+        "label": "Large",
+        "min": 1,
+        "max": 10,
+        "default": 4,
+        "condition": {
+          "general_variant": "variant1"
+        }
+      },
+      {
+        "id": "responsive_md",
+        "type": "number",
+        "name": "md",
+        "label": "Medium",
+        "min": 1,
+        "max": 10,
+        "default": 3,
+        "condition": {
+          "general_variant": "variant1"
+        }
+      },
+      {
+        "id": "responsive_sm",
+        "type": "number",
+        "name": "sm",
+        "label": "Small",
+        "min": 1,
+        "max": 10,
+        "default": 2,
+        "condition": {
+          "general_variant": "variant1"
+        }
+      },
+      {
+        "id": "responsive_xs",
+        "type": "number",
+        "name": "xs",
+        "label": "Extra small",
+        "min": 1,
+        "max": 10,
+        "default": 1,
+        "condition": {
+          "general_variant": "variant1"
+        }
+      },
+      {
+        "id": "responsive_lg_2",
+        "type": "number",
+        "name": "lg_2",
+        "label": "Large",
+        "min": 1,
+        "max": 10,
+        "default": 3,
+        "condition": {
+          "general_variant": [
+            "variant2",
+            "variant3"
+          ]
+        }
+      },
+      {
+        "id": "responsive_md_2",
+        "type": "number",
+        "name": "md_2",
+        "label": "Medium",
+        "min": 1,
+        "max": 10,
+        "default": 3,
+        "condition": {
+          "general_variant": [
+            "variant2",
+            "variant3"
+          ]
+        }
+      },
+      {
+        "id": "responsive_sm_2",
+        "type": "number",
+        "name": "sm_2",
+        "label": "Small",
+        "min": 1,
+        "max": 10,
+        "default": 2,
+        "condition": {
+          "general_variant": [
+            "variant2",
+            "variant3"
+          ]
+        }
+      },
+      {
+        "id": "responsive_xs_2",
+        "type": "number",
+        "name": "xs_2",
+        "label": "Extra small",
+        "min": 1,
+        "max": 10,
+        "default": 1,
+        "condition": {
+          "general_variant": [
+            "variant2",
+            "variant3"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "type": "section",
+    "name": "carousel",
+    "label": "Carousel",
+    "default": [],
+    "fields": [
+      {
+        "id": "carousel_enable",
+        "type": "switcher",
+        "name": "enable",
+        "label": "Enable",
+        "default": false
+      },
+      {
+        "id": "carousel_buttonEnable",
+        "type": "switcher",
+        "name": "buttonEnable",
+        "label": "Button Enable",
+        "default": true
+      },
+      {
+        "id": "carousel_paginationEnable",
+        "type": "switcher",
+        "name": "paginationEnable",
+        "label": "Pagination Enable",
+        "default": true
+      },
+      {
+        "id": "carousel_buttonColor",
+        "type": "color",
+        "default": "",
+        "name": "buttonColor",
+        "label": "Button Color"
+      }
+    ]
+  }
+]
