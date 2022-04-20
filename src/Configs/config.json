@@ -1,0 +1,23 @@
+{
+  "name": "wil-text-card",
+  "title": "Wiloke Card",
+  "keywords": [
+    "card",
+    "wiloke",
+    "table",
+    "cardTable",
+    "price",
+    "card table",
+    "list"
+  ],
+  "css": "https://envato-element-textcard.netlify.app/styles/styles.css",
+  "js": "https://envato-element-textcard.netlify.app/js/scripts.js",
+  "libs": {
+    "css": [
+      "https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.css"
+    ],
+    "js": [
+      "https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"
+    ]
+  }
+}

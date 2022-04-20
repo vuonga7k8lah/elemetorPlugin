@@ -30,7 +30,7 @@ class CardAddon extends Widget_Base
 
 	public function get_script_depends()
 	{
-		return [App::get('dataConfig')['name'].'-script', App::get('dataConfig')['name'].'-script-swiper-bundle'];
+		return App::get('handleJs');
 	}
 
 	public function get_icon()
@@ -40,7 +40,7 @@ class CardAddon extends Widget_Base
 
 	public function get_style_depends()
 	{
-		return [App::get('dataConfig')['name'].'-style', App::get('dataConfig')['name'].'-bundle.min'];
+		return App::get('handleCss');
 	}
 
 	public function get_categories()
@@ -111,15 +111,13 @@ class CardAddon extends Widget_Base
 
 	public function getDataConfigField(): array
 	{
-		return json_decode(file_get_contents(plugin_dir_path(__FILE__) . '../Assets/New/schema.json'), true);
-		//return json_decode(file_get_contents(plugin_dir_path(__FILE__) . '../Assets/test.json'), true);
+		return json_decode(file_get_contents(plugin_dir_path(__FILE__) . '../Configs/schema.json'), true);
 	}
 
 	protected function render()
 	{
 		Timber::$locations = WILOKE_CARD_VIEWS_PATH . 'src/Views';
 		self::$aSettings = $this->get_settings_for_display();
-		//var_dump(self::$aSettings);
 		Timber::render(plugin_dir_path(__FILE__) . "../Views/section.twig", [
 			"data" => $this->parseItems(self::$aSettings)
 		]);
