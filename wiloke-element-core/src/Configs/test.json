@@ -1,0 +1,18 @@
+[
+  {
+    "id": "general_1",
+    "type": "section",
+    "name": "general1",
+    "label": "General1",
+    "default": [],
+    "fields": [
+      {
+        "id": "font_family_3323423222",
+        "type": "font",
+        "name": "font22ddd222",
+        "label": "Fon22t",
+        "default": "Times New Rom222an"
+      }
+    ]
+  }
+]

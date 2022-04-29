@@ -1,0 +1,36 @@
+{
+  "name": "wil-card",
+  "namespace": "WilokeCard",
+  "title": "Wiloke Card",
+  "version": "1.0.0",
+  "icon": "eicon-info-box",
+  "category": "",
+  "information": {
+    "Plugin Name": "Wiloke Card for Elementor",
+    "Plugin URI": "https://wiloke.com",
+    "Description": "Wiloke Card Addon for Elementor",
+    "Version": "{{ version }}",
+    "Author": "wiloke",
+    "Author URI": "https://wiloke.com",
+    "License": "GPL-2.0+",
+    "License URI": "http://www.gnu.org/licenses/gpl-2.0.txt",
+    "Text Domain": "{{ name }}",
+    "Domain Path": "/languages",
+    "Tested up to": "5.6.2"
+  },
+  "keywords": [
+    "card",
+    "wiloke",
+    "table",
+    "cardTable",
+    "price",
+    "card table",
+    "list"
+  ],
+  "css": "https://envato-element-team-member.netlify.app/styles/styles.css",
+  "js": "https://envato-element-team-member.netlify.app/js/scripts.js",
+  "libs": {
+    "css": [],
+    "js": []
+  }
+}

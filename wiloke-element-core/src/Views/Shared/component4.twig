@@ -1,0 +1,45 @@
+{% set componentName = "wil-team-member" %}
+{% set background = item.backgroundColor ? 'background-color:' ~ item.backgroundColor ~ ';' : '' %}
+{% set nameColor = item.nameColor ? 'color:' ~ item.nameColor ~ ';' : '' %}
+{% set textColor = item.textColor ? 'color:' ~ item.textColor ~ ';' : '' %}
+{% set buttonColor = item.buttonColor ? 'color:' ~ item.buttonColor ~ ';' : '' %}
+{% set workColor = item.workColor ? 'color:' ~ item.workColor ~ ';' : '' %}
+{% set buttonBackgroundColor = item.buttonBackgroundColor ? 'background-color:' ~ item.buttonBackgroundColor ~ ';' : '' %}
+{% set socials = ['facebook','twitter','instagram','linkedin','youtube','pinterest','dribbble','behance','github','vimeo','soundcloud','tumblr','twitch','vk','reddit','medium','spotify','discord','telegram','skype','whatsapp'] %}
+
+
+<div class="{{ componentName }}-4 {{ componentName }}-parent c:#000 lh:1.5 p:15px p:20px bdrs:20px ta:center" style="{{ background }}">
+  {% if item.image %}
+    <div class="{{ componentName }}-4__img pos:relative pt:100% bdrs:50% bgp:center bgz:cover" style="background-image: url('{{ item.image }}')">
+      {% if item.buttonText %}
+        <div class="pos:absolute t:50% l:50% trf:translate(-50%,-50%)">
+          <a href="{{ item.buttonUrl }}" class="{{ componentName }}-3__btn {{ componentName }}-child--fadeup d:inline-block bxsh:none o:0 td:none p:15px_30px bdrs:6px bgc:#3146ce c:#fff fz:14px fw:600" style="{{ buttonColor }}{{ buttonBackgroundColor }}">{{ item.buttonText }}</a>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if item.work %}
+    <div class="{{ componentName }}-4__work mt:20px fz:11px fw:600! tt:uppercase lts:1px! c:#888" style="{{ workColor }}">{{ item.work }}</div>
+  {% endif %}
+
+  {% if item.name %}
+    <h2 class="{{ componentName }}-4__name m:0 mt:10px fz:pfs(18px,20px) fw:600!" style="{{ nameColor }}">{{ item.name }}</h2>
+  {% endif %}
+
+  {% if item.text %}
+    <div class="{{ componentName }}-4__text mt:10px fz:15px c:#888" style="{{ textColor }}">{{ item.text }}</div>
+  {% endif %}
+
+  {% if item.socialEnabled %}
+    <div class="d:inline-flex bgc:#eee p:0_10px bdrs:50px mt:20px">
+      {% for social in socials %}
+        {% if item[social] %}
+          <a href="{{ social.url }}" class="{{ componentName }}-4__social fz:16px td:none">
+            <i class="fab fa-{{ social }} c:#000 w:44px h:44px d:inline-flex jc:center ai:center trs:0.3s trf:scale(1.2)|h"></i>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,540 @@
+[
+  {
+    "id": "general",
+    "type": "section",
+    "name": "general",
+    "label": "General",
+    "default": [],
+    "fields": [
+      {
+        "id": "font_family_3323423",
+        "type": "font",
+        "name": "font22ddd",
+        "label": "Font",
+        "default": "Times New Roman",
+        "selectors":{
+          ".title12": "1",
+          "{{WRAPPER}} .wil-team-member-wrapper": "2"
+        }
+      },
+      {
+        "id": "general_content",
+        "type": "array",
+        "default": [],
+        "name": "content",
+        "label": "Content",
+        "fields": [
+          {
+            "id": "general_content_image",
+            "type": "media",
+            "default": {
+              "url": "/wp-content/plugins/wil-team-member/src/Assets/Image/placeholder.jpeg"
+            },
+            "name": "image",
+            "label": "Image"
+          },
+          {
+            "id": "general_content_name",
+            "type": "text",
+            "default": "Monique Greer",
+            "name": "name",
+            "label": "Name"
+          },
+          {
+            "id": "general_content_text",
+            "type": "wysiwyg",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue eu rhoncus vehicula",
+            "name": "text",
+            "label": "Description"
+          },
+          {
+            "id": "general_content_work",
+            "type": "text",
+            "default": "Web Developer",
+            "name": "work",
+            "label": "Work"
+          },
+          {
+            "id": "general_content_buttonText",
+            "type": "text",
+            "default": "Read more",
+            "name": "buttonText",
+            "label": "Button Text"
+          },
+          {
+            "id": "general_content_buttonUrl",
+            "type": "text",
+            "default": "",
+            "name": "buttonUrl",
+            "label": "Button Url"
+          },
+          {
+            "id": "general_content_backgroundColor",
+            "type": "color",
+            "default": "",
+            "name": "backgroundColor",
+            "label": "Background Color"
+          },
+          {
+            "id": "general_content_nameColor",
+            "type": "color",
+            "default": "",
+            "name": "nameColor",
+            "label": "Name Color"
+          },
+          {
+            "id": "general_content_textColor",
+            "type": "color",
+            "default": "",
+            "name": "textColor",
+            "label": "Text Color"
+          },
+          {
+            "id": "general_content_workColor",
+            "type": "color",
+            "default": "",
+            "name": "workColor",
+            "label": "Work Color"
+          },
+          {
+            "id": "general_content_buttonColor",
+            "type": "color",
+            "default": "",
+            "name": "buttonColor",
+            "label": "Button Color"
+          },
+          {
+            "id": "general_content_buttonBackgroundColor",
+            "type": "color",
+            "default": "",
+            "name": "buttonBackgroundColor",
+            "label": "Button Background Color"
+          },
+          {
+            "id": "general_content_socialEnabled",
+            "type": "switcher",
+            "default": true,
+            "name": "socialEnabled",
+            "label": "Social Enabled",
+            "return_value": "yes"
+          },
+          {
+            "id": "general_content_facebook",
+            "type": "text",
+            "default": "#",
+            "name": "facebook",
+            "label": "Facebook",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_twitter",
+            "type": "text",
+            "default": "#",
+            "name": "twitter",
+            "label": "Twitter",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_instagram",
+            "type": "text",
+            "default": "#",
+            "name": "instagram",
+            "label": "Instagram",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_linkedin",
+            "type": "text",
+            "default": "#",
+            "name": "linkedin",
+            "label": "Linkedin",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_youtube",
+            "type": "text",
+            "default": "",
+            "name": "youtube",
+            "label": "Youtube",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_pinterest",
+            "type": "text",
+            "default": "",
+            "name": "pinterest",
+            "label": "Pinterest",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_dribbble",
+            "type": "text",
+            "default": "",
+            "name": "dribbble",
+            "label": "Dribbble",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_behance",
+            "type": "text",
+            "default": "",
+            "name": "behance",
+            "label": "Behance",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_github",
+            "type": "text",
+            "default": "",
+            "name": "github",
+            "label": "Github",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_vimeo",
+            "type": "text",
+            "default": "",
+            "name": "vimeo",
+            "label": "Vimeo",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_soundcloud",
+            "type": "text",
+            "default": "",
+            "name": "soundcloud",
+            "label": "Soundcloud",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_tumblr",
+            "type": "text",
+            "default": "",
+            "name": "tumblr",
+            "label": "Tumblr",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_twitch",
+            "type": "text",
+            "default": "",
+            "name": "twitch",
+            "label": "Twitch",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_vk",
+            "type": "text",
+            "default": "",
+            "name": "vk",
+            "label": "Vk",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_reddit",
+            "type": "text",
+            "default": "",
+            "name": "reddit",
+            "label": "Reddit",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_medium",
+            "type": "text",
+            "default": "",
+            "name": "medium",
+            "label": "Medium",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_spotify",
+            "type": "text",
+            "default": "",
+            "name": "spotify",
+            "label": "Spotify",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_discord",
+            "type": "text",
+            "default": "",
+            "name": "discord",
+            "label": "Discord",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_telegram",
+            "type": "text",
+            "default": "",
+            "name": "telegram",
+            "label": "Telegram",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_skype",
+            "type": "text",
+            "default": "",
+            "name": "skype",
+            "label": "Skype",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          },
+          {
+            "id": "general_content_whatsapp",
+            "type": "text",
+            "default": "",
+            "name": "whatsapp",
+            "label": "Whatsapp",
+            "condition": {
+              "general_content_socialEnabled": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "general_variant",
+        "type": "select",
+        "default": "variant1",
+        "name": "variant",
+        "label": "Variant",
+        "options": {
+          "variant1": "Variant 1",
+          "variant2": "Variant 2",
+          "variant3": "Variant 3",
+          "variant4": "Variant 4",
+          "variant5": "Variant 5"
+        }
+      }
+    ]
+  },
+  {
+    "id": "responsive",
+    "type": "section",
+    "name": "responsive",
+    "label": "Responsive",
+    "default": [],
+    "fields": [
+      {
+        "id": "responsive_lg",
+        "type": "number",
+        "name": "lg",
+        "label": "Column Large",
+        "min": 1,
+        "max": 10,
+        "default": 4,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_md",
+        "type": "number",
+        "name": "md",
+        "label": "Column Medium",
+        "min": 1,
+        "max": 10,
+        "default": 3,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_sm",
+        "type": "number",
+        "name": "sm",
+        "label": "Column Small",
+        "min": 1,
+        "max": 10,
+        "default": 2,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_xs",
+        "type": "number",
+        "name": "xs",
+        "label": "Column Extra Small",
+        "min": 1,
+        "max": 10,
+        "default": 1,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_gapLg",
+        "type": "number",
+        "name": "gapLg",
+        "label": "Gap Large",
+        "min": 0,
+        "max": 60,
+        "default": 30,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_gapMd",
+        "type": "number",
+        "name": "gapMd",
+        "label": "Gap Medium",
+        "min": 0,
+        "max": 60,
+        "default": 30,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_gapSm",
+        "type": "number",
+        "name": "gapSm",
+        "label": "Gap Small",
+        "min": 0,
+        "max": 60,
+        "default": 30,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      },
+      {
+        "id": "responsive_gapXs",
+        "type": "number",
+        "name": "gapXs",
+        "label": "Gap Extra Small",
+        "min": 0,
+        "max": 60,
+        "default": 30,
+        "condition": {
+          "general_variant": [
+            "variant1",
+            "variant2",
+            "variant3",
+            "variant4"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "type": "section",
+    "name": "carousel",
+    "label": "Carousel",
+    "default": [],
+    "fields": [
+      {
+        "id": "carousel_enable",
+        "type": "switcher",
+        "name": "enable",
+        "label": "Enable",
+        "default": false
+      },
+      {
+        "id": "carousel_buttonEnable",
+        "type": "switcher",
+        "name": "buttonEnable",
+        "label": "Button Enable",
+        "default": true,
+        "condition": {
+          "carousel_enable": true
+        }
+      },
+      {
+        "id": "carousel_paginationEnable",
+        "type": "switcher",
+        "name": "paginationEnable",
+        "label": "Pagination Enable",
+        "default": true,
+        "condition": {
+          "carousel_enable": true
+        }
+      },
+      {
+        "id": "carousel_buttonColor",
+        "type": "color",
+        "name": "buttonColor",
+        "label": "Button Color",
+        "default": "#000",
+        "condition": {
+          "carousel_enable": true
+        }
+      }
+    ]
+  }
+]

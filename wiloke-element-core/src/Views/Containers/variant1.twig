@@ -1,0 +1,60 @@
+{% set componentName = "wil-team-member" %}
+{% set columnStyles = '--col-xs:' ~ responsive.xs ~ ';--col-sm:' ~ responsive.sm ~ ';--col-md:' ~ responsive.md ~ ';--col-lg:' ~ responsive.lg %}
+{% set gapStyles = '--gap-xs:' ~ responsive.gapXs ~ 'px;--gap-sm:' ~ responsive.gapSm ~ 'px;--gap-md:' ~ responsive.gapMd ~ 'px;--gap-lg:' ~ responsive.gapLg ~ 'px' %}
+{% set componentFile = 'component1.twig' %}
+
+{% if content|length == 0 %}
+<div class="{{ componentName }}-wrapper">
+  <div class="p:40px fz:20px ta:center bgc:#eee cur:pointer">Click here to set up the team member</div>
+</div>
+{% else %}
+
+<div class="{{ componentName }}-wrapper">
+    <h2 class="title12">
+        HELLO
+    </h2>
+  {% if carousel and carousel.enable %}
+    {% set buttonEnable = carousel.buttonEnable is not defined ? true : carousel.buttonEnable %}
+    {% set paginationEnable = carousel.paginationEnable is not defined ? true : carousel.paginationEnable %}
+    {% set buttonColor = carousel.buttonColor is not defined ? '#111' : carousel.buttonColor %}
+    <div
+      class="wil-swiper"
+      data-options='{
+        slidesPerView: {{ responsive.xs }},
+        spaceBetween: {{ responsive.gapXs }},
+        breakpoints: {
+          768: { slidesPerView: {{ responsive.sm }}, spaceBetween: {{ responsive.gapSm }} },
+          992: { slidesPerView: {{ responsive.md }}, spaceBetween: {{ responsive.gapMd }} },
+          1200: { slidesPerView: {{ responsive.lg }}, spaceBetween: {{ responsive.gapLg }} }
+        }
+      }'
+    >
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          {% for item in content %}
+            <div class="swiper-slide">
+              {% include "Shared/" ~ componentFile with { item } %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% if buttonEnable %}
+        <div class="swiper-button-next bg:none!" style="color: {{ buttonColor }}"></div>
+        <div class="swiper-button-prev bg:none!" style="color: {{ buttonColor }}"></div>
+      {% endif %}
+      {% if paginationEnable %}
+        <div class="swiper-pagination" style="color: {{ buttonColor }}"></div>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="{{ componentName }}-grid" style="{{ columnStyles }};{{ gapStyles }}">
+      {% for item in content %}
+        <div class="{{ componentName }}-col">
+          {% include "Shared/" ~ componentFile with { item } %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{% endif %}

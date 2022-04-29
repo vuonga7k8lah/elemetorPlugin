@@ -1,0 +1,7 @@
+{% set componentName = "wil-team-member" %}
+
+{% include "Containers/" ~ data.general.variant ~ ".twig" with {
+  content: data.general.content,
+  responsive: data.responsive,
+  carousel: data.carousel,
+} %}
